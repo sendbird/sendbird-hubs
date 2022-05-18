@@ -29,7 +29,7 @@ const joinRoom = async (req, res) => {
         const room = await Room.findOne({ where: { channelUrl: channelUrl } });
         const userApiInstance = new SendbirdPlatformSdk.UserApi();
         userApiInstance.apiClient.basePath = `https://api-${room.sbAppId}.sendbird.com`;
-        const existingUser = await userApiInstance.viewUserById(room.sbApiToken, sessionId).catch((e) => { console.log(e) });
+        const existingUser = await userApiInstance.viewUserById(room.sbApiToken, sessionId).catch((e) => { });
 
         if (existingUser?.user_id) {
             return res.json({ userId: existingUser.user_id, accessToken: existingUser.access_token });
@@ -38,10 +38,10 @@ const joinRoom = async (req, res) => {
 
             const createUserOpts = buildCreateUserOpts(sessionId, nickname);
             const newUser = await userApiInstance.createUser(room.sbApiToken, createUserOpts).catch((e) => { console.log(e) });
-            console.log(newUser);
+
             const inviteMemberOpts = buildInviteMemberOpts(newUser);
             await groupChannelApiInstance.gcInviteAsMembers(room.sbApiToken, channelUrl, inviteMemberOpts).catch((e) => { console.log(e) });
-            return res.json({ userId: newUser.user_id, accessToken: newUser.access_token });
+            return res.json({ userId: newUser.user_id, accessToken: newUser.access_token, appId: room.sbAppId });
 
         }
 

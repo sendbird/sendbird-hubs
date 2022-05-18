@@ -2,7 +2,15 @@ const SendbirdPlatformSdk = require('sendbird-platform-sdk');
 const { Room } = require('../models/index.js');
 
 const createRoom = async (req, res) => {
+    console.log('yo create the room');
     const { roomId, sbAppId, sbApiToken } = req.body;
+
+    if (!roomId) {
+        res.status(400)
+        return res.json({
+            error: 'no room id specified'
+        });
+    }
 
     if (!sbAppId) {
         res.status(400)
@@ -17,12 +25,14 @@ const createRoom = async (req, res) => {
             error: 'no api token specified'
         });
     }
+    console.log('yo create the room 1');
 
     // call api
     try {
         const newRoom = await Room.create({ channelUrl: roomId, sbAppId, sbApiToken });
         const channeldata = new SendbirdPlatformSdk.GcCreateChannelData();
         channeldata.channel_url = newRoom.channelUrl;
+        console.log('yo create the room 2');
 
         const opts = {
             'gcCreateChannelData': channeldata
@@ -34,6 +44,8 @@ const createRoom = async (req, res) => {
         res.json({ channelUrl: data.channel_url });
 
     } catch (e) {
+        console.log('yo create the room 3');
+
         console.log(e);
 
         res.status(500);
