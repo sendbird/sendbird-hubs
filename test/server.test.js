@@ -48,7 +48,7 @@ test('create room api token', async () => {
     });
 });
 
-test('join room for first time', async () => {
+test.only('join room for first time', async () => {
     const nockBackUserNotFound = await nockBack('view-user-not-found.json');
     const nockBackCreateUser = await nockBack('create-user.json');
     const nockBackJoinChannel = await nockBack('invite-to-channel.json');
@@ -58,7 +58,7 @@ test('join room for first time', async () => {
 
     const response = await request(app)
         .post('/room/join')
-        .send({ channelUrl: '1234', sessionId: 'abc123', nickName: 'bob' })
+        .send({ channelUrl: '1234', sessionId: 'abc123', nickname: 'bob' })
         .set('Accept', 'application/json');
     expect(response.status).toEqual(200);
     expect(response.body.userId).toEqual("abc123");
@@ -79,7 +79,7 @@ test('join room again', async () => {
 
     const response = await request(app)
         .post('/room/join')
-        .send({ channelUrl: '1234', sessionId: 'abc123', nickName: 'bob' })
+        .send({ channelUrl: '1234', sessionId: 'abc123', nickname: 'bob' })
         .set('Accept', 'application/json')
     expect(response.status).toEqual(200);
     expect(response.body.userId).toEqual("abc123");
