@@ -1,6 +1,6 @@
 ### Models
 
 #### Room
- - id
+ - channelUrl
  - sbAppId
  - sbApiToken

@@ -1,0 +1,117 @@
+[
+    {
+        "scope": "https://api-4b7775c5-4f19-428d-93ba-6747da590381.sendbird.com:443",
+        "method": "GET",
+        "path": "/v3/users/abc123",
+        "body": "",
+        "status": 400,
+        "response": {
+            "message": "\"User\" not found.",
+            "code": 400201,
+            "error": true
+        },
+        "rawHeaders": [
+            "Date",
+            "Mon, 16 May 2022 15:42:14 GMT",
+            "Content-Type",
+            "application/json",
+            "Content-Length",
+            "60",
+            "Connection",
+            "close",
+            "Server",
+            "nginx/1.20.2",
+            "X-RateLimit-Remaining",
+            "99",
+            "Request-Id",
+            "687fd333-8fbf-4fdd-8dfe-ff013c3128c6",
+            "X-RateLimit-Limit",
+            "100;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.00999999046326",
+            "Access-Control-Allow-Origin",
+            "*"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "https://api-4b7775c5-4f19-428d-93ba-6747da590381.sendbird.com:443",
+        "method": "POST",
+        "path": "/v3/users",
+        "body": {
+            "user_id": "abc123",
+            "nickname": "bob",
+            "profile_url": "",
+            "issue_access_token": true
+        },
+        "status": 200,
+        "response": [
+            "1f8b08000000000000034590ed4ec3300c45dfc5bf8bb41658695f0521cb499cd66a9a8c7c4c9aa6bd3b96cae0bfef39f7fa0e2b15e42b670c6959d8a144983d85c21d5cd6141963db0d6798013a285c8aa488356d1c0bcc9f5f1d64fe6e9219a9d5157dca78c9c94b60949d16fe8391b51a3e920af3be3f593a8f76fc20c77e64db4f643c0fe7894e9319c6c9b9b7fe7d54a914245be5aaac9a9ba29c149bb4f20d37befdb6d0a31483c47f612b3a4a9cbac8d87e785552a052b13047a40af34bdf4114bb45da350526994366335365f7b43de7b41c8e27ec5cc9512598ef8fc70fcba77fa541010000"
+        ],
+        "rawHeaders": [
+            "Date",
+            "Mon, 16 May 2022 15:42:14 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "Server",
+            "nginx/1.20.2",
+            "Vary",
+            "Accept-Encoding",
+            "X-RateLimit-Remaining",
+            "19",
+            "Request-Id",
+            "8ec37e96-21f6-4a8a-a85d-82d361a002ef",
+            "X-RateLimit-Limit",
+            "20;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.0499999523163",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Content-Encoding",
+            "gzip"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "http://127.0.0.1:57831",
+        "method": "POST",
+        "path": "/room/join",
+        "body": {
+            "channelUrl": "1234",
+            "sessionId": "abc123",
+            "nickName": "bob"
+        },
+        "status": 200,
+        "response": {
+            "userId": "abc123",
+            "accessToken": "ff10ca67c78adef7ec19abfe269a09b279dd4157"
+        },
+        "rawHeaders": [
+            "X-Powered-By",
+            "Express",
+            "Content-Type",
+            "application/json; charset=utf-8",
+            "Content-Length",
+            "76",
+            "ETag",
+            "W/\"4c-TcyO7z+3INgzSAg3KwOIEbuB0fE\"",
+            "Date",
+            "Mon, 16 May 2022 15:42:14 GMT",
+            "Connection",
+            "close"
+        ],
+        "responseIsBinary": false
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "scope": "https://api-4b7775c5-4f19-428d-93ba-6747da590381.sendbird.com:443",
+        "method": "GET",
+        "path": "/v3/users/abc123",
+        "body": "",
+        "status": 400,
+        "response": {
+            "message": "\"User\" not found.",
+            "code": 400201,
+            "error": true
+        },
+        "rawHeaders": [
+            "Date",
+            "Mon, 16 May 2022 15:13:46 GMT",
+            "Content-Type",
+            "application/json",
+            "Content-Length",
+            "60",
+            "Connection",
+            "close",
+            "Server",
+            "nginx/1.20.2",
+            "X-RateLimit-Remaining",
+            "99",
+            "Request-Id",
+            "a62bc5b4-0729-414f-8fd1-5dbead68048f",
+            "X-RateLimit-Limit",
+            "100;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.00999999046326",
+            "Access-Control-Allow-Origin",
+            "*"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "http://127.0.0.1:50557",
+        "method": "POST",
+        "path": "/room/join",
+        "body": {
+            "channelUrl": "1234",
+            "sessionId": "abc123",
+            "avatarName": "bob"
+        },
+        "status": 500,
+        "response": {
+            "error": "server side error"
+        },
+        "rawHeaders": [
+            "X-Powered-By",
+            "Express",
+            "Content-Type",
+            "application/json; charset=utf-8",
+            "Content-Length",
+            "29",
+            "ETag",
+            "W/\"1d-MzCBU+X2VUZ0TmEQ71eNxGcmecI\"",
+            "Date",
+            "Mon, 16 May 2022 15:13:46 GMT",
+            "Connection",
+            "close"
+        ],
+        "responseIsBinary": false
+    }
+]

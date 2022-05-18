@@ -48,14 +48,41 @@ test('create room api token', async () => {
     });
 });
 
-test('join room', async () => {
+test('join room for first time', async () => {
+    const nockBackUserNotFound = await nockBack('view-user-not-found.json');
+    const nockBackCreateUser = await nockBack('create-user.json');
+    const nockBackJoinChannel = await nockBack('invite-to-channel.json');
+
     const app = createServer();
+    const newRoom = await Room.create({ channelUrl: '1234', sbAppId: '4B7775C5-4F19-428D-93BA-6747DA590381', sbApiToken: 'eb9ff15baf3972042a691e5f0b5dcea3a59d592f' });
+
     const response = await request(app)
         .post('/room/join')
+        .send({ channelUrl: '1234', sessionId: 'abc123', nickName: 'bob' })
+        .set('Accept', 'application/json');
+    expect(response.status).toEqual(200);
+    expect(response.body.userId).toEqual("abc123");
+    expect(response.body.accessToken.length > 0).toBe(true);
+
+    nockBackUserNotFound.nockDone();
+    nockBackCreateUser.nockDone();
+    nockBackJoinChannel.nockDone();
+
+
+});
+
+test('join room again', async () => {
+    const { nockDone, context } = await nockBack('view-user.json');
+
+    const app = createServer();
+    const newRoom = await Room.create({ channelUrl: '1234', sbAppId: '4B7775C5-4F19-428D-93BA-6747DA590381', sbApiToken: 'eb9ff15baf3972042a691e5f0b5dcea3a59d592f' });
+
+    const response = await request(app)
+        .post('/room/join')
+        .send({ channelUrl: '1234', sessionId: 'abc123', nickName: 'bob' })
         .set('Accept', 'application/json')
     expect(response.status).toEqual(200);
-    expect(response.body.userId).toEqual("bob1");
-    expect(response.body.accessToken).toEqual("blahblahblah");
-
-
+    expect(response.body.userId).toEqual("abc123");
+    expect(response.body.accessToken.length > 0).toBe(true);
+    nockDone();
 });
