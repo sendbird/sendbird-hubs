@@ -28,7 +28,7 @@ test('create room no app id', async () => {
     const app = createServer();
     const response = await request(app)
         .post('/room')
-        .send({ sbApiToken: '1234' })
+        .send({ roomId: 'channel-url', sbApiToken: '1234' })
         .set('Accept', 'application/json')
     expect(response.status).toEqual(400);
     expect(response.body).toEqual({
@@ -44,11 +44,11 @@ test('create room api token', async () => {
         .set('Accept', 'application/json')
     expect(response.status).toEqual(400);
     expect(response.body).toEqual({
-        error: 'no api token specified'
+        error: 'no room id specified'
     });
 });
 
-test.only('join room for first time', async () => {
+test('join room for first time', async () => {
     const nockBackUserNotFound = await nockBack('view-user-not-found.json');
     const nockBackCreateUser = await nockBack('create-user.json');
     const nockBackJoinChannel = await nockBack('invite-to-channel.json');
