@@ -1,9 +1,7 @@
-const { encrypt } = require('./encrypt');
-test('encrypt', () => {
-    const result = encrypt("api-key");
-    // expect(result).toEqual('234');
-});
-
-test('decrypt', () => {
+const { encrypt, decrypt } = require('./encrypt');
+test('encrypt then decrypt', () => {
+    const encryptedString = encrypt("api-key");
+    const decryptedString = decrypt(encryptedString);
+    expect(decryptedString).toEqual('api-key');
 
 });

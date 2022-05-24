@@ -1,6 +1,7 @@
 const request = require('supertest');
 const nockBack = require('nock').back
 const { Room } = require('../src/models');
+const { encrypt } = require('../src/utils/encrypt');
 const createServer = require('../src/server');
 nockBack.fixtures = __dirname + '/fixtures';
 nockBack.setMode('dryrun');
@@ -54,7 +55,7 @@ test('join room for first time', async () => {
     const nockBackJoinChannel = await nockBack('invite-to-channel.json');
 
     const app = createServer();
-    const newRoom = await Room.create({ channelUrl: '1234', sbAppId: '4B7775C5-4F19-428D-93BA-6747DA590381', sbApiToken: 'eb9ff15baf3972042a691e5f0b5dcea3a59d592f' });
+    const newRoom = await Room.create({ channelUrl: '1234', sbAppId: '4B7775C5-4F19-428D-93BA-6747DA590381', sbApiToken: encrypt('eb9ff15baf3972042a691e5f0b5dcea3a59d592f') });
 
     const response = await request(app)
         .post('/room/join')
@@ -75,7 +76,7 @@ test('join room again', async () => {
     const { nockDone, context } = await nockBack('view-user.json');
 
     const app = createServer();
-    const newRoom = await Room.create({ channelUrl: '1234', sbAppId: '4B7775C5-4F19-428D-93BA-6747DA590381', sbApiToken: 'eb9ff15baf3972042a691e5f0b5dcea3a59d592f' });
+    const newRoom = await Room.create({ channelUrl: '1234', sbAppId: '4B7775C5-4F19-428D-93BA-6747DA590381', sbApiToken: encrypt('eb9ff15baf3972042a691e5f0b5dcea3a59d592f') });
 
     const response = await request(app)
         .post('/room/join')

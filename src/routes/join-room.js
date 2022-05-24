@@ -1,5 +1,7 @@
 const SendbirdPlatformSdk = require('sendbird-platform-sdk');
 const { Room } = require('../models/index.js');
+const { decrypt } = require('../utils/encrypt');
+
 
 const buildCreateUserOpts = (sessionId, nickname) => {
     const createUserData = new SendbirdPlatformSdk.CreateUserData();
@@ -29,7 +31,8 @@ const joinRoom = async (req, res) => {
         const room = await Room.findOne({ where: { channelUrl: channelUrl } });
         const userApiInstance = new SendbirdPlatformSdk.UserApi();
         userApiInstance.apiClient.basePath = `https://api-${room.sbAppId}.sendbird.com`;
-        const existingUser = await userApiInstance.viewUserById(room.sbApiToken, sessionId).catch((e) => { });
+
+        const existingUser = await userApiInstance.viewUserById(decrypt(room.sbApiToken), sessionId).catch((e) => { });
 
         if (existingUser?.user_id) {
             return res.json({ userId: existingUser.user_id, accessToken: existingUser.access_token });
