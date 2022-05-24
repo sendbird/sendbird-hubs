@@ -7,6 +7,7 @@ const createServer = () => {
     const app = express();
     app.use(express.json());
     app.use(cors());
+    app.use(express.static('public'));
     app.post("/room", createRoom);
     app.post("/room/join", joinRoom);
     return app

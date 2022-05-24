@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.addColumn(
-      'Room',
+      'Rooms',
       'channelUrl',
       {
         type: Sequelize.DataTypes.STRING,
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeColumn('Room', 'channelUrl');
+    await queryInterface.removeColumn('Rooms', 'channelUrl');
 
   }
 };
