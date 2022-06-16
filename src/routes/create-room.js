@@ -30,6 +30,7 @@ const createRoom = async (req, res) => {
     // call api
     try {
         const encodedApiToken = encrypt(sbApiToken);
+        console.log('roomId', roomId)
         const newRoom = await Room.create({ channelUrl: roomId, sbAppId, sbApiToken: encodedApiToken }).catch((e) => { console.log({ 'message': 'failed to create room', 'error': e }) });
         const channeldata = new SendbirdPlatformSdk.GcCreateChannelData();
         channeldata.channel_url = newRoom.channelUrl;
