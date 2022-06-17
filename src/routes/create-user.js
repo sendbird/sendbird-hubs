@@ -32,11 +32,12 @@ const createRoom = async (req, res) => {
 
     // call api
     try {
-        const APP_ID = "6C1652F3-FD66-49F8-BA4C-0B7D53E132A0";
+        const APP_ID = process.env.APP_ID;
+        const API_KEY = process.env.API_KEY;
         const userApiInstance = new SendbirdPlatformSdk.UserApi();
         userApiInstance.apiClient.basePath = `https://api-${APP_ID}.sendbird.com`;
         // get user if exists;
-        const data = await userApiInstance.createUser('109c07eb18905ed64d7d94af5a415f0589e11204', opts);
+        const data = await userApiInstance.createUser(API_KEY, opts);
         console.log(data);
         // save to database
         res.json({ access_token: data.access_token });
