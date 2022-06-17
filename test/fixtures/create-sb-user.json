@@ -1,0 +1,76 @@
+[
+    {
+        "scope": "https://api-6c1652f3-fd66-49f8-ba4c-0b7d53e132a0.sendbird.com:443",
+        "method": "POST",
+        "path": "/v3/users",
+        "body": {
+            "user_id": "1234",
+            "nickname": "bob",
+            "profile_url": "",
+            "issue_access_token": true
+        },
+        "status": 200,
+        "response": [
+            "1f8b08000000000000034590db6e83301044ff659fa9141a1228bf5255abb53d060bb0135f224551febdae68daf79d7366f641b324c60d91d7304d30ec3c8d56d684862e73f0605f3685482351430929b9e03987053ed1f8f9d550c4b5b808969267b621f22506eb56b0db64c21f4cb4aee13d59614a1fd451d95ef750fa84c320bd51edd9a23dca80e12c837c74b63b55a94b2c3abb5b65e5582acab8a443ad7ce705f7df16f528f8d5f97f6149759433d5d5be1fbbca5925654e8067c934beb50d79a7172f1b7efa04b5ab7484649897eb35a6c4757fc1862c46b2d0f8783ebf018b04da183f010000"
+        ],
+        "rawHeaders": [
+            "Date",
+            "Thu, 16 Jun 2022 16:00:17 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "Server",
+            "nginx/1.20.2",
+            "Vary",
+            "Accept-Encoding",
+            "X-RateLimit-Remaining",
+            "19",
+            "Request-Id",
+            "ef75cce1-54e8-424b-adc6-0f64a43bf73c",
+            "X-RateLimit-Limit",
+            "20;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.0499999523163",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Content-Encoding",
+            "gzip"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "http://127.0.0.1:49433",
+        "method": "POST",
+        "path": "/user",
+        "body": {
+            "sessionId": "1234",
+            "name": "bob"
+        },
+        "status": 200,
+        "response": {},
+        "rawHeaders": [
+            "X-Powered-By",
+            "Express",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Content-Type",
+            "application/json; charset=utf-8",
+            "Content-Length",
+            "2",
+            "ETag",
+            "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
+            "Date",
+            "Thu, 16 Jun 2022 16:00:17 GMT",
+            "Connection",
+            "close"
+        ],
+        "responseIsBinary": false
+    }
+]
