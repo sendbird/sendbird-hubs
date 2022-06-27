@@ -5,8 +5,6 @@ const SendbirdPlatformSdk = require('sendbird-platform-sdk');
 const createRoom = async (req, res) => {
     const { sessionId, name } = req.body;
 
-
-
     if (!sessionId) {
         res.status(400)
         return res.json({
@@ -29,16 +27,41 @@ const createRoom = async (req, res) => {
         'createUserData': createUserData,
     };
 
+    const channelUrls = [
+        'sendbird_group_channel_36291_0601d8164691d5fb3900791e7849406779691afe',
+        'sendbird_group_channel_36291_695369e5c45f5db4319e7021f7139eecee8b166b',
+        'sendbird_group_channel_36291_e5470f0bdd600595c39b93a2ac52c5e187b87a19',
+        'sendbird_group_channel_36291_4de01f1eaaeb738264b215d627021855c5de24ca'
+    ];
+
 
     // call api
     try {
         const APP_ID = process.env.APP_ID;
         const API_KEY = process.env.API_KEY;
         const userApiInstance = new SendbirdPlatformSdk.UserApi();
+        const channelApiInstance = new SendbirdPlatformSdk.GroupChannelApi();
         userApiInstance.apiClient.basePath = `https://api-${APP_ID}.sendbird.com`;
+        channelApiInstance.apiClient.basePath = `https://api-${APP_ID}.sendbird.com`;
+
         // get user if exists;
         const data = await userApiInstance.createUser(API_KEY, opts);
-        console.log(data);
+        const joinChannelData = new SendbirdPlatformSdk.GcJoinChannelData();
+        joinChannelData.user_id = data.user_id;
+
+
+        const joinChannelOpts = {
+            'gcJoinChannelData': joinChannelData
+        }
+
+        for (const channelUrl of channelUrls) {
+            joinChannelData.channel_url = channelUrl;
+
+            await channelApiInstance.gcJoinChannel(API_KEY, channelUrl, joinChannelOpts)
+
+        }
+
+
         // save to database
         res.json({ access_token: data.access_token });
 

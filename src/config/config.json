@@ -14,9 +14,9 @@
     "dialect": "sqlite"
   },
   "production": {
-    "username": "root",
+    "username": "postgres",
     "password": null,
-    "database": "sendbird_hubs_production",
+    "database": "polycosm_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

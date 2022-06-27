@@ -11,11 +11,11 @@
         },
         "status": 200,
         "response": [
-            "1f8b08000000000000034590db6e83301044ff659fa9141a1228bf5255abb53d060bb0135f224551febdae68daf79d7366f641b324c60d91d7304d30ec3c8d56d684862e73f0605f3685482351430929b9e03987053ed1f8f9d550c4b5b808969267b621f22506eb56b0db64c21f4cb4aee13d59614a1fd451d95ef750fa84c320bd51edd9a23dca80e12c837c74b63b55a94b2c3abb5b65e5582acab8a443ad7ce705f7df16f528f8d5f97f6149759433d5d5be1fbbca5925654e8067c934beb50d79a7172f1b7efa04b5ab7484649897eb35a6c4757fc1862c46b2d0f8783ebf018b04da183f010000"
+            "1f8b08000000000000034590d16e83300c45ffc5cf4c4a068cc1af4c93651203112169e3a45255f5df1789757bf73de75e3f602341be71421fd7952dba00d3425eb881cb16036328c7cc0926800684455c0c98e3ce4160fafa6e20f1b5b8c448256fb8c484971417e719dd412bffc1c8981a3e931566fb7eec5ba67168870f1aec4cac94fad4b65f54d769dd926ec75e992a758264b2bb55564ea5a2ac13136be53bee7cff6d518f62f02efc0b8bd451ce56977e6fbbcaf124198539206598de7403c1993dd0513330c7f95499c494d9be5caf3125f9f3050767b29409a6c7f3f903030cb61b3f010000"
         ],
         "rawHeaders": [
             "Date",
-            "Thu, 16 Jun 2022 16:00:17 GMT",
+            "Mon, 27 Jun 2022 15:46:35 GMT",
             "Content-Type",
             "application/json",
             "Transfer-Encoding",
@@ -23,13 +23,13 @@
             "Connection",
             "close",
             "Server",
-            "nginx/1.20.2",
+            "nginx",
             "Vary",
             "Accept-Encoding",
             "X-RateLimit-Remaining",
             "19",
             "Request-Id",
-            "ef75cce1-54e8-424b-adc6-0f64a43bf73c",
+            "69c5b102-9518-43e4-9d22-c818ad402027",
             "X-RateLimit-Limit",
             "20;w=1",
             "X-Frame-Options",
@@ -46,7 +46,183 @@
         "responseIsBinary": false
     },
     {
-        "scope": "http://127.0.0.1:49433",
+        "scope": "https://api-6c1652f3-fd66-49f8-ba4c-0b7d53e132a0.sendbird.com:443",
+        "method": "PUT",
+        "path": "/v3/group_channels/sendbird_group_channel_36291_0601d8164691d5fb3900791e7849406779691afe/join",
+        "body": {
+            "channel_url": "sendbird_group_channel_36291_0601d8164691d5fb3900791e7849406779691afe",
+            "user_id": "1234"
+        },
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003d555cb6edb3010fc179eed449265c9f2ad45d15bbea00908525cc94cc447f970eb06fef7ae9e761a04cda139f46468b9bb333bdca19f8902ef590bd447779447d6510fb5d1c293fd3a5d91a81d3041e7a4da441dc83e5911e9a9903e485de377c33a0f2b52471f8ca2e16481ec091992c01e408163dd92652c7e06e310e1db03169923381a1d26904308d6efef6fef6f7d6041d6371eb4e0d2899bda280c32653bb8bf1d4aa61f9a6e6e1e6d8b608d03f8050b8c02c561007926d163a2148890669b1c73550c20a8005f3b6983347ae13b9c2c4d30c0ea208fd836b8087321b2a22c8c0af54cfb711f8dd458b922ce7497f18dee30bcf473f03d4a0794c570a08d71d43ad3c80ea85428ef92d6311ff01e402f285ad64f9aa9be31371c7bcf85a370fd481098608191fdf3f9bcba9eb9e2595eb22a5b6789a8d67953b0352f0ab1e61c785624695a8aec3fd7e4f33b3479989776d81bc6bb65000cdbc83b59cf81b1a6ef80e9cc5a604eea76760176fb8b6bb06170b26dc1a130fcb4d8a7f7d234d019b35a6d70ee9e35d3329c28920fe0ae85f6d15e05a661bf3aa303ca4de6259f6d99a19b10a2bf8d5ea3b4d86e77bbb2dc6ca74bab9106e68a9ec8a0f98b4be5ce3051a3ca2f25bf1afa95bf15e87e5110afdfb6c9d0d18a85c2f850385028f9056c6af0e9cbddddd06402200738916bf1a7f633e088f16ac62229b79b324977151e1d98d6d0cd15ad33d1924b785c8cf951a1c3319d0f374556a5344143885d5ae445958a6dc337559294550ae52eaff2a428cb0a0f580317e283c9f2a4cab3a228b2f27cf5688ef42f8fa6579ea2061d67f5532fe80f26c3cbcd819f7517f18226f70e9262c7d148f4d5752bf69376a05b74ce22e33649928f1a792aecb9bf6719ffdc970f22f5c6ceffb37f96b7559e77f57cfe0d8bfc49ab49070000"
+        ],
+        "rawHeaders": [
+            "Date",
+            "Mon, 27 Jun 2022 15:46:36 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "Server",
+            "nginx",
+            "Vary",
+            "Accept-Encoding",
+            "X-RateLimit-Remaining",
+            "19",
+            "Request-Id",
+            "90170426-6d0a-4742-b80c-c485a01a8073",
+            "X-RateLimit-Limit",
+            "20;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.0499999523163",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Content-Encoding",
+            "gzip"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "https://api-6c1652f3-fd66-49f8-ba4c-0b7d53e132a0.sendbird.com:443",
+        "method": "PUT",
+        "path": "/v3/group_channels/sendbird_group_channel_36291_695369e5c45f5db4319e7021f7139eecee8b166b/join",
+        "body": {
+            "channel_url": "sendbird_group_channel_36291_695369e5c45f5db4319e7021f7139eecee8b166b",
+            "user_id": "1234"
+        },
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003b554cb92da400cfc973913c0189b98637e236c4dc9636166775e99075942f1efd118db6193daca1e921365b9a56eb5da5c99c610a0471e923fcb33281e5058d305b6ff542c58321ea1e31348d86422dbaf174c06dec910a511f47c041570c1440ad16a1e2f0ed99eb10184ee841a3da819651d3d46eb89e1eb1335d9337a9e3c01d8294617f687d5611522442996014dd74adf2d85d55404ed141e5643cbf8c38b72f9ec7a223b7ac41f38d368d42d0e245796020165470cc5a6dc1256a7881def30082f5d94d6cc7a8737f3102a8088f24c63a34f3835922a0ef1ee50569ad77db6d250e78279ab7ead6f8da2f23ccfe3b7243d7248f1c48fd673e7ed512ae45293bd334c4188740734338b91e2c580ce835bdbd2eca9f16e5c5e0923741081edafb7dbd374a0c12368d5bc00955d6a951453e1de9327101c9c43f0d2f4d3c569da5f124203a3977d8f9e8c692f7354726ec6856e84ea8da5bdb36a30325e38898fe81f8d0ec93d14c665bf807821b7d974cf2981442c88211f235b54d455d5ac9baad88d3713a482b05dd63158fee6a6adb7d00932f9ade3f3ce2629f5907d9313f290fda003a73ed592b86cd07790f1ad29f82a5422f2317843d4c9857b46f81fab6878e50a4d4fa1983554eb3551891318836a3cf3f439f0dedbe4f8f4b2ac374dc1eba62aeb062bb1ad8e55d76ecba2c1dd7a531c7745d9200ac4cf6d51d7393c6363d6fe019f7fffaaff93a677cef9cffe1fde3779fa046eb79f2dc884cb0f050000"
+        ],
+        "rawHeaders": [
+            "Date",
+            "Mon, 27 Jun 2022 15:46:36 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "Server",
+            "nginx",
+            "Vary",
+            "Accept-Encoding",
+            "X-RateLimit-Remaining",
+            "19",
+            "Request-Id",
+            "094a8b0b-2fb0-4480-bf91-89435181cc5c",
+            "X-RateLimit-Limit",
+            "20;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.0499999523163",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Content-Encoding",
+            "gzip"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "https://api-6c1652f3-fd66-49f8-ba4c-0b7d53e132a0.sendbird.com:443",
+        "method": "PUT",
+        "path": "/v3/group_channels/sendbird_group_channel_36291_e5470f0bdd600595c39b93a2ac52c5e187b87a19/join",
+        "body": {
+            "channel_url": "sendbird_group_channel_36291_e5470f0bdd600595c39b93a2ac52c5e187b87a19",
+            "user_id": "1234"
+        },
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003b5544d93da300cfd2b1d9f2924b001c2b9ffa0c7b2e3516c11bcebd8ae3fe85286ff5e3921196867db1eda1313597aefe949e2c23a0c015ae421f9933a81e601853532b0ddc772c692f108928f49c22613d9ae983115b854212a23e8fb003ae08c8914a2ed783c3b643bf609227cf82c141a81ac2f4077c40e3de8a9c23afa8cd613db976702b027f43c794a60c7185dd8ed17fb45881095980734b2515ece85ed28089dd3b85ff425b71f5e96f317d712d9c1237ec789a6c3aec19ee4c252a0442589a15cae9e28b74b1125971884572e2a6be869d0dbbf4c20140011d58960a34f3816922a0e71702b2bcdadbf5865a872c6bcd538c159a3293ce179fc9a94470e291ef9c17aeebc3d288d5c7564f594a621449a099a89c528f16aa0cbc08d6d087b2c1c8ccb2d610449f6b3dde57a7d1e87d57b048d9e1aa0b04b8d56620c0c351981d2c13904af4c3b4e9fd0feb02d0418bd6a5bf4644c739ed626efd0ada12b65b5c652df59351815cf9cc447f4f74687e4ee02b7667f5aa861a8e34a12bb209a3c91ec53b9aeaabaa8ab727b1b9c2029942bb398def787c136de8214e4f4a3ed53e326697d770c26afc9dd31842e70aad30d88d7ecd23750f1d1197c133a11f96dfbfa7d272b8645e1bfb4d2c11bd7685ada8c4943551444258e600ceadbacc79be0adb7c9f1f171b55ed625c7ea69531c8a46ca7551547525567553af6009a25a8a0acbeda6d96ea0acd9849ab5ffadd9bfbbf5ff24f29df9feb37f8df75d1f0fe37afd0171b609d631050000"
+        ],
+        "rawHeaders": [
+            "Date",
+            "Mon, 27 Jun 2022 15:46:36 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "Server",
+            "nginx",
+            "Vary",
+            "Accept-Encoding",
+            "X-RateLimit-Remaining",
+            "19",
+            "Request-Id",
+            "161e84f3-cdc4-4235-a44c-c89135ad6ce4",
+            "X-RateLimit-Limit",
+            "20;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.0499999523163",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Content-Encoding",
+            "gzip"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "https://api-6c1652f3-fd66-49f8-ba4c-0b7d53e132a0.sendbird.com:443",
+        "method": "PUT",
+        "path": "/v3/group_channels/sendbird_group_channel_36291_4de01f1eaaeb738264b215d627021855c5de24ca/join",
+        "body": {
+            "channel_url": "sendbird_group_channel_36291_4de01f1eaaeb738264b215d627021855c5de24ca",
+            "user_id": "1234"
+        },
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003b5545d8fda3010fc2b959f2924817007cffd0b952a9593b5b197e03bc776fd418f22fe7bd72149e1aa53fbd03ea16c66776667279c598721408b3c247f5447d03ca0b04606b6fd58ce58321e41f211246c32916d8b1953814b15a232829ef7a003ce984821da8ec79343b665ac07a13b60871ef484b28e1ea3f5c4f0f5899aec113d4f9e00ec10a30bdbdd62b70811a212f3804636cacbb9b01d15a1731a778bbe65f8e1e572feec5a22db7bc41f38d174d835d8939c590a04549218ca6ab9226c97224a2e3108af5c54d64c7afb37d3102a8088ea4863a34f3836922a0ef1ea50569ad77db6ca50e78c79ab7fad6f8da6f234cfe3b7a43c7248f1c0f7d673e7ed5e69e4aa237b27988610e90e682616a3c48b812e0f6e6c43b3c7c6ab7179258c202102db9e2f97a7f140bd47d0e869012abbd46825c6c2b5274f20383887e09569c78bd3b43f24840646afda163d19d39ca6a8e4dc0c0b5d08d51a4b7b67d560543c71121fd1df1a1d92bb290ccb7efef2e11306ea66e345c70c12b5208e7c8e6c52b9aeeb4db1a9ab62b89a201d849559496ffadd551b6f410ab2f9def3696b93b4be49bfc919b9497fe802a73edd8078c9167d0715ef6dc157a113910fd1ebc34e3e5c53c27f5ba58357aed1b4148b49435d1444250e600ceae1d0e307c15b6f93e3e3cbe5bada947c25b128f7250260f3b07cacd6aba62a6bb9ae1e8aaa7cac6b514bac5602d834356bff2ba7df7ed9ff49d53b07fd67ff11efdb3c7e0697cb4f0c1e917f13050000"
+        ],
+        "rawHeaders": [
+            "Date",
+            "Mon, 27 Jun 2022 15:46:36 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "close",
+            "Server",
+            "nginx",
+            "Vary",
+            "Accept-Encoding",
+            "X-RateLimit-Remaining",
+            "19",
+            "Request-Id",
+            "a6cb6b36-f394-4465-822e-234ca91a4397",
+            "X-RateLimit-Limit",
+            "20;w=1",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "X-RateLimit-RetryAfter",
+            "0.0",
+            "X-RateLimit-Reset",
+            "0.0499999523163",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Content-Encoding",
+            "gzip"
+        ],
+        "responseIsBinary": false
+    },
+    {
+        "scope": "http://127.0.0.1:60111",
         "method": "POST",
         "path": "/user",
         "body": {
@@ -54,7 +230,9 @@
             "name": "bob"
         },
         "status": 200,
-        "response": {},
+        "response": {
+            "access_token": "d55953ea97376a7dbae00081d5f044113a13950c"
+        },
         "rawHeaders": [
             "X-Powered-By",
             "Express",
@@ -63,11 +241,11 @@
             "Content-Type",
             "application/json; charset=utf-8",
             "Content-Length",
-            "2",
+            "59",
             "ETag",
-            "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
+            "W/\"3b-GIH39dZ/lFtgUiuNbRV8vzWxnz4\"",
             "Date",
-            "Thu, 16 Jun 2022 16:00:17 GMT",
+            "Mon, 27 Jun 2022 15:46:36 GMT",
             "Connection",
             "close"
         ],

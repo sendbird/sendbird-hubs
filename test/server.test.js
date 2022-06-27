@@ -15,17 +15,9 @@ describe('create user', () => {
             .send({ sessionId: '1234', name: 'bob' })
             .set('Accept', 'application/json');
         expect(response.status).toEqual(200);
-        expect(response.body.access_token).toEqual("bc0b3bf7c7ebc5e08a7db16fe13a8e86a8a94f45");
+        expect(response.body.access_token).toEqual("d55953ea97376a7dbae00081d5f044113a13950c");
 
         nockDone();
-
-    });
-
-    test('return existing user if already user for session id', () => {
-
-    });
-
-    test('handle bad input data', () => {
 
     });
 });
