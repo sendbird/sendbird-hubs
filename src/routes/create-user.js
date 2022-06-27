@@ -46,16 +46,18 @@ const createRoom = async (req, res) => {
 
         // get user if exists;
         const data = await userApiInstance.createUser(API_KEY, opts);
-        const joinChannelData = new SendbirdPlatformSdk.GcJoinChannelData();
-        joinChannelData.user_id = data.user_id;
 
 
-        const joinChannelOpts = {
-            'gcJoinChannelData': joinChannelData
-        }
+
 
         for (const channelUrl of channelUrls) {
+            const joinChannelData = new SendbirdPlatformSdk.GcJoinChannelData();
+            joinChannelData.user_id = data.user_id;
             joinChannelData.channel_url = channelUrl;
+            const joinChannelOpts = {
+                'gcJoinChannelData': joinChannelData
+            }
+
 
             await channelApiInstance.gcJoinChannel(API_KEY, channelUrl, joinChannelOpts)
 
@@ -68,7 +70,7 @@ const createRoom = async (req, res) => {
     } catch (e) {
         console.log(e);
         res.status(500);
-        return res.json({ error: 'server side error' })
+        return res.json({ error: e })
     }
 
 }
