@@ -1,5 +1,4 @@
 const SendbirdPlatformSdk = require('sendbird-platform-sdk');
-
 // const { Room } = require('../models/index.js');
 
 const createRoom = async (req, res) => {
@@ -31,7 +30,7 @@ const createRoom = async (req, res) => {
         'sendbird_group_channel_36291_0601d8164691d5fb3900791e7849406779691afe',
         'sendbird_group_channel_36291_695369e5c45f5db4319e7021f7139eecee8b166b',
         'sendbird_group_channel_36291_e5470f0bdd600595c39b93a2ac52c5e187b87a19',
-        'sendbird_group_channel_36291_4de01f1eaaeb738264b215d627021855c5de24ca'
+        'sendbird_group_channel_36291_13683d422f023b1aec1092b3ff3e088e2077fefe'
     ];
 
 

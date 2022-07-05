@@ -180,9 +180,9 @@
     {
         "scope": "https://api-6c1652f3-fd66-49f8-ba4c-0b7d53e132a0.sendbird.com:443",
         "method": "PUT",
-        "path": "/v3/group_channels/sendbird_group_channel_36291_4de01f1eaaeb738264b215d627021855c5de24ca/join",
+        "path": "/v3/group_channels/sendbird_group_channel_36291_13683d422f023b1aec1092b3ff3e088e2077fefe/join",
         "body": {
-            "channel_url": "sendbird_group_channel_36291_4de01f1eaaeb738264b215d627021855c5de24ca",
+            "channel_url": "sendbird_group_channel_36291_13683d422f023b1aec1092b3ff3e088e2077fefe",
             "user_id": "1234"
         },
         "status": 200,
