@@ -19,6 +19,7 @@ const createRoom = async (req, res) => {
         });
     }
 
+
     const createUserData = new SendbirdPlatformSdk.CreateUserData(sessionId, name, "");
     createUserData.issue_access_token = true;
 
@@ -42,11 +43,23 @@ const createRoom = async (req, res) => {
         const channelApiInstance = new SendbirdPlatformSdk.GroupChannelApi();
         userApiInstance.apiClient.basePath = `https://api-${APP_ID}.sendbird.com`;
         channelApiInstance.apiClient.basePath = `https://api-${APP_ID}.sendbird.com`;
+        let viewUserdata;
 
-        // get user if exists;
+        try {
+            viewUserdata = await userApiInstance.viewUserById(API_KEY, sessionId);
+            console.log('viewer exists')
+            return res.json({ access_token: viewUserdata.access_token });
+
+        } catch (error) {
+            console.log('viewer not exists')
+            if (error.status !== 400) {
+                return res.json({ error });
+
+            }
+
+        }
+
         const data = await userApiInstance.createUser(API_KEY, opts);
-
-
 
 
         for (const channelUrl of channelUrls) {
