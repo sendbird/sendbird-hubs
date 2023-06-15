@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sendbird-hubs
+description: Enhance Mozilla Hubs VR rooms with a feature-rich chat experiance.
+  annotations:
+    github.com/project-slug: sendbird/sendbird-hubs
+spec:
+  type: library
+  lifecycle: production
+  owner: dep-developer-experience
+  system: sendbird-chat
+
